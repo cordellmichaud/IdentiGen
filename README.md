@@ -5,6 +5,7 @@ Version: v1.0.0
 
 ## Table of Contents
 * [Overview](#overview)
+* [Examples](#examples)
 * [Current Features](#current-features)
 * [Roadmap](#roadmap)
 * [Requirements](#requirements)
@@ -16,6 +17,11 @@ Version: v1.0.0
 
 ## Overview
 IdentiGen generates identicons using the SHA-512 hash function applied to a given string, and stores the identicons in a specified filepath. By default, IdentiGen generates a 16x16 identicon composed of 3 colors with saturation and value above 51 and below 204.
+
+## Examples
+| :---: | :---: |
+| ![Example 1](images/ex1.png) | ![Example 2](images/ex2.png) |
+| ![Example 3](images/ex3.png) | ![Example 4](images/ex4.png) |
 
 ## Current Features
 * Generate identicons composed of a specified number of colors within a given HSV color range
