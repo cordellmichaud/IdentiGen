@@ -69,7 +69,7 @@ optional arguments:
 ```
 * For example, to generate a 512x512 identicon composed of 4 colors with vertical symmetry, minimum 30% saturation, and maximum 70% saturation, for the string ```IdentiGen Example``` to be saved in the directory ```identicons```, you would use the following command:
 ```
-python identigen.py -sym 2 -w 512 -c 4 -min (0.0, 0.3, 0.0) -max (1.0, 0.7, 1.0) "identiGen Example" "identicons"
+python identigen.py -sym 2 -w 512 -c 4 -min (0.0, 0.3, 0.0) -max (1.0, 0.7, 1.0) "IdentiGen Example" "identicons"
 ```
 
 ### Using IdentiGen in a Python program
@@ -79,6 +79,10 @@ import numpy
 
 idgen = IdenticonGenerator()
 image = idgen.generate(string, symmetry=1, img_width=16, color_count=3, hsv_percent_min=(0.0, 0.2, 0.2), hsv_percent_max=(1.0, 0.8, 0.8))
+```
+* For example, to generate a 512x512 identicon composed of 4 colors with vertical symmetry, minimum 30% saturation, and maximum 70% saturation, for the string ```IdentiGen Example```, you would use the following code:
+```python
+idgen.generate("IdentiGen Example", symmetry=2, img_width=512, color_count=4, hsv_percent_min=(0.0, 0.3, 0.0), hsv_percent_max=(1.0, 0.7, 1.0))
 ```
 
 ## License
