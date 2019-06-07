@@ -50,7 +50,8 @@ class IdenticonGenerator:
         else:  # symmetry == self.__quarter_symmetry:
             hsvimg = IdenticonGenerator.__create_quarter_symmetric_img(img_width, colors)
 
-        return hsvimg
+        rgbimg = cv.cvtColor(hsvimg, cv.COLOR_HSV2RGB_FULL)
+        return rgbimg
 
     @staticmethod
     def __scale_img_to_multiple(img, scaled_width):
@@ -164,8 +165,8 @@ if __name__ == "__main__":
     parser.add_argument("-max", "--hsvmax", type=tuple, help="the maximum percentages of hue, saturation, and value "
                                                              "from which to generate colors", default=(1.0, 0.8, 0.8))
     args = parser.parse_args()
-    generated_img_hsv = idgen.generate(args.string, args.symmetry, args.width)
-    rgbimg = cv.cvtColor(generated_img_hsv, cv.COLOR_HSV2RGB_FULL)
+    
+    rgbimg = idgen.generate(args.string, args.symmetry, args.width, args.colors, args.hsvmin, args.hsvmax)
 
     dirpath = Path(args.directorypath)
     if not dirpath.is_dir():
