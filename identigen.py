@@ -165,7 +165,6 @@ if __name__ == "__main__":
                                                              "from which to generate colors", default=(1.0, 0.8, 0.8))
     args = parser.parse_args()
     generated_img_hsv = idgen.generate(args.string, args.symmetry, args.width)
-    generated_img_bgr = cv.cvtColor(generated_img_hsv, cv.COLOR_HSV2RGB_FULL)
     rgbimg = cv.cvtColor(generated_img_hsv, cv.COLOR_HSV2RGB_FULL)
 
     dirpath = Path(args.directorypath)
