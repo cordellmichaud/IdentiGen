@@ -160,9 +160,9 @@ if __name__ == "__main__":
                         default=16)
     parser.add_argument("-c", "--colors", type=int, help="the number of colors from which to create the identicon",
                         default=3)
-    parser.add_argument("-min", "--hsvmin", type=tuple, help="the minimum percentages of hue, saturation, and value "
+    parser.add_argument("-min", "--hsvmin", type=float, nargs=3, help="the minimum percentages of hue, saturation, and value "
                                                              "from which to generate colors", default=(0.0, 0.2, 0.2))
-    parser.add_argument("-max", "--hsvmax", type=tuple, help="the maximum percentages of hue, saturation, and value "
+    parser.add_argument("-max", "--hsvmax", type=float, nargs=3, help="the maximum percentages of hue, saturation, and value "
                                                              "from which to generate colors", default=(1.0, 0.8, 0.8))
     args = parser.parse_args()
     

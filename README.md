@@ -75,7 +75,7 @@ optional arguments:
 ```
 * For example, to generate a 512x512 identicon composed of 4 colors with vertical symmetry, minimum 30% saturation, and maximum 70% saturation, for the string ```IdentiGen Example``` to be saved in the directory ```identicons```, you would use the following command:
 ```
-python identigen.py -sym 2 -w 512 -c 4 -min (0.0, 0.3, 0.0) -max (1.0, 0.7, 1.0) "IdentiGen Example" "identicons"
+python identigen.py -sym 2 -w 512 -c 4 -min 0.0 0.3 0.0 -max 1.0 0.7 1.0 "IdentiGen Example" "identicons"
 ```
 
 ### Using IdentiGen in a Python program
