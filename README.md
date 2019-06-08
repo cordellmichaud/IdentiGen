@@ -1,7 +1,8 @@
 
 # IdentiGen
 An identicon generator written in Python. Works for the command line or as a class you can use in your code.
-Version: v1.0.0
+
+Version: v1.0.1
 
 ## Table of Contents
 * [Overview](#overview)
